@@ -3,3 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    background-color: blanchedalmond;
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1, main, .member {
+text-align: center;
+padding: 1rem;
+}
