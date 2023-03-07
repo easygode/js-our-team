@@ -55,3 +55,29 @@ for (let i = 0; i < team.length; i++) {
     console.log(`Position:${team[i].position}`);
     console.log(`Picture:${team[i].img}`);
 }
+
+//MILESTONE 2 - con innerHTML visualizzo nella pagina HTML le informazioni di nome, ruolo e la stringa della foto per ogni membro del team
+const teamList = document.getElementById("team");
+
+for (let i = 0; i < team.length; i++) {
+
+    const member = document.createElement("div");
+    member.classList.add("member");
+    teamList.append(member);
+
+    const firstName = document.createElement("div");
+    firstName.innerHTML = `First Name: ${team[i].firstName}`;
+    member.append(firstName);
+
+    const lastName = document.createElement("div");
+    lastName.innerHTML = `Last Name: ${team[i].lastName}`;
+    member.append(lastName);
+
+    const position = document.createElement("div");
+    position.innerHTML = `Position: ${team[i].position}`;
+    member.append(position);
+
+    const img = document.createElement("img");
+    img.src = "img/" + team[i].img;
+    member.append(img);
+}
